@@ -1,2 +1,9 @@
-# udacity-online-resume
-:mortar_board: Front-End Web Developer Nanodegree project.
+# [Udacity Online Resume](https://github.com/udacity/frontend-nanodegree-resume)
+
+Front-End Web Developer Nanodegree project.
+
+## Demo
+
+[![demo](https://raw.githubusercontent.com/brenopolanski/udacity-online-resume/master/demo.png)](http://brenopolanski.github.io/udacity-online-resume/)
+
+> [Check it live](http://brenopolanski.github.io/udacity-online-resume/).
