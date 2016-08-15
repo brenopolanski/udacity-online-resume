@@ -10,8 +10,14 @@ var bio = {
     twitter: '@brenopolanski',
     location: 'Brazil'
   },
-  welcomeMessage: 'Software Engineer based in Brazil and core commiter of open source project Saiku Analytics. Mainly focused on front-end development and helping other people by giving presentations, writing articles and creating open source projects.',
-  skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Web Applications', 'User Interface', 'WordPress', 'Algorithms', 'Front-end Development', 'Open Source', 'Node.js', 'Git', 'Backbone.js', 'Underscore.js', 'React.js'],
+  welcomeMessage: 'Software Engineer based in Brazil and core commiter of open ' +
+                  'source project Saiku Analytics. Mainly focused on front-end ' +
+                  'development and helping other people by giving presentations, ' +
+                  'writing articles and creating open source projects.',
+  skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Web Applications',
+           'User Interface', 'WordPress', 'Algorithms', 'Front-end Development',
+           'Open Source', 'Node.js', 'Git', 'Backbone.js', 'Underscore.js',
+           'React.js'],
   biopic: 'images/me.jpg',
   display: function() {
     var formattedName = HTMLheaderName.replace(DATA, bio.name);
@@ -27,7 +33,8 @@ var bio = {
     var formattedWelcomeMessage = HTMLwelcomeMsg.replace(DATA, bio.welcomeMessage);
 
     $('#header').prepend(formattedName + formattedRole);
-    $('#topContacts, #footerContacts').append(formattedMobile + formattedEmail + formattedGithub + formattedTwitter + formattedLocation);
+    $('#topContacts, #footerContacts').append(formattedMobile + formattedEmail +
+      formattedGithub + formattedTwitter + formattedLocation);
     $('#header').append(formattedBioPic);
     $('#header').append(formattedWelcomeMessage);
 
@@ -50,35 +57,53 @@ var work = {
       title: 'Front End Software Engineer',
       location: 'Brazil',
       dates: 'September 2014 - Until now',
-      description: 'I work in Saiku that offers a user friendly, web based analytics solution that lets users, quickly and easily analyse corporate data and create and share reports. The solution connects to a range of OLAP Servers including Mondrian, Microsoft Analysis Services, SAP BW and Oracle Hyperion and can be deployed rapidly and cost effectively to allow users to explore data in real time.'
+      description: 'I work in Saiku that offers a user friendly, web based ' +
+                   'analytics solution that lets users, quickly and easily ' +
+                   'analyse corporate data and create and share reports. The ' +
+                   'solution connects to a range of OLAP Servers including ' +
+                   'Mondrian, Microsoft Analysis Services, SAP BW and Oracle ' +
+                   'Hyperion and can be deployed rapidly and cost effectively ' +
+                   'to allow users to explore data in real time.'
     },
     {
       employer: 'NUTES (UEPB)',
       title: 'Student Researcher',
       location: 'Brazil',
       dates: 'July 2014 - November 2015',
-      description: 'I worked (part-time) researcher at NUTES/UEPB, where I had the opportunity to study and develop a software of electrocardiograms (ECG) and a web app for view medical records.'
+      description: 'I worked (part-time) researcher at NUTES/UEPB, where I had ' +
+                   'the opportunity to study and develop a software of ' +
+                   'electrocardiograms (ECG) and a web app for view medical records.'
     },
     {
       employer: 'Microsoft',
       title: 'Microsoft Student Partner',
       location: 'Brazil',
       dates: 'December 2012 - October 2015',
-      description: 'Microsoft Student Partners (MSPs) are student technology leaders, empowered to build Microsoft communities on their campus and share their deep knowledge and passion for technology with their fellow classmates.'
+      description: 'Microsoft Student Partners (MSPs) are student technology ' +
+                   'leaders, empowered to build Microsoft communities on their ' +
+                   'campus and share their deep knowledge and passion for ' +
+                   'technology with their fellow classmates.'
     },
     {
       employer: 'Indra Company',
       title: 'Systems Analyst',
       location: 'Brazil',
       dates: 'June 2013 - September 2014',
-      description: 'I worked in SIGSAB (Sistema de Gestão da Informação e do Conhecimento do Semiárido Brasileiro) project, for INSA (Instituto Nacional do Semiárido). The system was developed using open source projects of Business Intelligence (Pentaho BI and Saiku Analytics).'
+      description: 'I worked in SIGSAB (Sistema de Gestão da Informação e do ' +
+                   'Conhecimento do Semiárido Brasileiro) project, for INSA ' +
+                   '(Instituto Nacional do Semiárido). The system was developed ' +
+                   'using open source projects of Business Intelligence ' +
+                   '(Pentaho BI and Saiku Analytics).'
     },
     {
       employer: 'SENAI',
       title: 'Web Developer',
       location: 'Brazil',
       dates: 'February 2012 - May 2013',
-      description: 'I worked with the development of web system SGM (Sistema Gerenciador de Metas) to work in the strategic management of institution and a system for students view class schedules, notes and fill institutional forms.'
+      description: 'I worked with the development of web system SGM ' +
+                   '(Sistema Gerenciador de Metas) to work in the strategic ' +
+                   'management of institution and a system for students view ' +
+                   'class schedules, notes and fill institutional forms.'
     }
   ],
   display: function() {
@@ -107,25 +132,44 @@ var projects = {
     {
       'title': 'Notifier for Udacity Reviewer',
       'dates': 'July 2016',
-      'description': 'The extension checks for new notifications every minute and displays notifications that arrived after the last check if there are any. Clicking on the notification opens it on Udacity Dashboard.',
+      'description': 'The extension checks for new notifications every minute ' +
+                     'and displays notifications that arrived after the last ' +
+                     'check if there are any. Clicking on the notification ' +
+                     'opens it on Udacity Dashboard.',
       'images': ['images/notifier-udacity-1.png', 'images/notifier-udacity-2.png']
     },
     {
       'title': 'CSS Flexbox snippets',
       'dates': 'Dezember 2015',
-      'description': 'CSS Flexbox for Sublime Text and Atom editor. With more than 3K download.',
+      'description': 'CSS Flexbox for Sublime Text and Atom editor. ' +
+                     'With more than 3K download.',
       'images': ['images/css-flexbox-snippets.gif']
     },
     {
       'title': 'A Saiku REST API client for Node.js',
       'dates': 'June 2015',
-      'description': 'This client is designed to make it easy for your Node.js application to request specific resources from Saiku. It uses a query builder-style syntax to let you craft the request being made to the Saiku endpoints, then returns the API server is response to your application as a JavaScript object.',
+      'description': 'This client is designed to make it easy for your Node.js ' +
+                     'application to request specific resources from Saiku. ' +
+                     'It uses a query builder-style syntax to let you craft ' +
+                     'the request being made to the Saiku endpoints, then ' +
+                     'returns the API server is response to your application ' +
+                     'as a JavaScript object.',
       'images': []
     },
     {
-      'title': 'SIGSAB - Sistema de Gestão da Informação e do Conhecimento do Semiárido Brasileiro',
+      'title': 'SIGSAB - Sistema de Gestão da Informação e do Conhecimento ' +
+               'do Semiárido Brasileiro',
       'dates': 'September 2014',
-      'description': 'This projects aim is to institutionalize, consolidate and operationalize a computerized information and knowledge management system, through a databank linked to a Geographical Information System (Sistema de Informações Geográficas – SIG) to generate scientific information connected to popular knowledge, aiming at subsidizing the formulation of policies that match the regions context. Another goal is to support other strategic studies and offer relevant services to policy and decision makers.',
+      'description': 'This projects aim is to institutionalize, consolidate ' +
+                     'and operationalize a computerized information and ' +
+                     'knowledge management system, through a databank linked ' +
+                     'to a Geographical Information System (Sistema de ' +
+                     'Informações Geográficas – SIG) to generate scientific ' +
+                     'information connected to popular knowledge, aiming at ' +
+                     'subsidizing the formulation of policies that match the ' +
+                     'regions context. Another goal is to support other ' +
+                     'strategic studies and offer relevant services to policy ' +
+                     'and decision makers.',
       'images': ['images/sigsab.png']
     },
     {
@@ -137,55 +181,74 @@ var projects = {
     {
       'title': 'CSS Comments snippets',
       'dates': 'May 2014',
-      'description': 'CSS comments snippets for Sublime Text. With more than 7K download.',
+      'description': 'CSS comments snippets for Sublime Text. ' +
+                     'With more than 7K download.',
       'images': ['images/css-comments-snippets.gif']
     },
     {
       'title': 'Web App Boilerplate',
       'dates': 'August 2013',
-      'description': 'Project designed to create web applications in WebView to Android.',
+      'description': 'Project designed to create web applications in ' +
+                     'WebView to Android.',
       'images': []
     },
     {
       'title': 'Meu Drink App for Windows 8',
       'dates': 'May 2013',
-      'description': 'Meu Drink application offers its users the best drink recipes. App available for download in the Windows Store Brazil.',
+      'description': 'Meu Drink application offers its users the best drink ' +
+                     'recipes. App available for download in the Windows ' +
+                     'Store Brazil.',
       'images': ['images/meu-drink-app-win8.jpeg']
     },
     {
       'title': 'Tic tac toe Paper App for Windows 8',
       'dates': 'April 2013',
-      'description': 'Classic game tic tac toe for two players (not online). The player who succeeds in placing three respective marks (X and O) in a horizontal, vertical, or diagonal row wins the game.',
+      'description': 'Classic game tic tac toe for two players (not online). ' +
+                     'The player who succeeds in placing three respective ' +
+                     'marks (X and O) in a horizontal, vertical, or diagonal ' +
+                     'row wins the game.',
       'images': ['images/tic-tac-toe-paper-app-win8.jpeg']
     },
     {
       'title': 'Descontos na Net App for Windows 8',
       'dates': 'March 2013',
-      'description': 'The Application Descontos na Net its users the best offers from 10 shops of the largest internet e-commerce in Brazil. App available for download in the Windows Store Brazil.',
+      'description': 'The Application Descontos na Net its users the best ' +
+                     'offers from 10 shops of the largest internet e-commerce ' +
+                     'in Brazil. App available for download in the Windows ' +
+                     'Store Brazil.',
       'images': ['images/descontos-na-net-app-win8.jpeg']
     },
     {
       'title': 'Game Hero Eros - GGJ 2013',
       'dates': 'January 2013',
-      'description': 'The Global Game Jam (GGJ) is the world is largest game jam event (game creation) taking place around the world at physical locations. It is all condensed into a 48 hour development cycle. The GGJ encourages people with all kinds of backgrounds to participate and contribute to this global spread of game development and creativity.',
+      'description': 'The Global Game Jam (GGJ) is the world is largest game ' +
+                     'jam event (game creation) taking place around the world ' +
+                     'at physical locations. It is all condensed into a 48 ' +
+                     'hour development cycle. The GGJ encourages people with ' +
+                     'all kinds of backgrounds to participate and contribute ' +
+                     'to this global spread of game development and creativity.',
       'images': ['images/game-hero-eros.jpg']
     },
     {
       'title': 'SENAI Student Portal',
       'dates': 'July 2012',
-      'description': 'Web system developed at SENAI-PB, for students visualize class schedules, notes and fill institutional forms.',
+      'description': 'Web system developed at SENAI-PB, for students ' +
+                     'visualize class schedules, notes and fill ' +
+                     'institutional forms.',
       'images': []
     },
     {
       'title': 'SGM - Sistema Gerenciador de Metas',
       'dates': 'May 2011',
-      'description': 'Web system developed at SENAI-PB to work in the strategic management of the institution.',
+      'description': 'Web system developed at SENAI-PB to work in the ' +
+                     'strategic management of the institution.',
       'images': []
     },
     {
       'title': 'Site Descontos na Net',
       'dates': 'May 2010',
-      'description': 'Web site that gathers coupons of the largest e-commerce stores in Brazil.',
+      'description': 'Web site that gathers coupons of the largest e-commerce ' +
+                     'stores in Brazil.',
       'images': []
     }
   ],
