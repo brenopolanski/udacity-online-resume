@@ -203,10 +203,77 @@ var projects = {
         $('.project-entry').append(formattedDescription);
 
         for (var j = 0, jLen = projects.projects[i].images.length; j < jLen; j++) {
-          var formattedImages = HTMLprojectImage.replace(DATA, projects.projects[i].images[j]);
+          var formattedImage = HTMLprojectImage.replace(DATA, projects.projects[i].images[j]);
 
-          $('.project-entry').append(formattedImages);
+          $('.project-entry').append(formattedImage);
         }
+      }
+    }
+  }
+};
+
+var education = {
+  schools: [
+    {
+      'name': 'Facisa - Faculdade de Ciências Sociais e Aplicadas',
+      'location': 'Campina Grande, Paraíba, Brazil',
+      'degree': 'Bachelor of Computer (BSc.), Information Systems',
+      'majors': ['Information Systems'],
+      'dates': '2009 - 2015',
+      'url': 'http://www.cesed.br'
+    }
+  ],
+  onlineCourses: [
+   {
+     'title': 'HTML5 - Homologado pelo W3C',
+     'school': 'Microsoft Virtual Academy',
+     'dates': 'April 2012',
+     'url': 'https://mva.microsoft.com/pt-br/training-courses/html5-homologado-pelo-w3c-8551?l=ZbUEQe10_1804984382'
+   },
+   {
+     'title': 'React for Beginners',
+     'school': 'Wes Bos',
+     'dates': 'November 2015',
+     'url': 'https://reactforbeginners.com'
+   }
+  ],
+  display: function() {
+    if (education.schools.length > 0) {
+      $('#education').append(HTMLschoolStart);
+
+      for (var i = 0, iLen = education.schools.length; i < iLen; i++) {
+        var formattedName = HTMLschoolName.replace(DATA, education.schools[i].name);
+        var formattedDegree = HTMLschoolDegree.replace(DATA, education.schools[i].degree);
+        var formattedDates = HTMLschoolDates.replace(DATA, education.schools[i].dates);
+        var formattedLocation = HTMLschoolLocation.replace(DATA, education.schools[i].location);
+        var formattedNameDegree = formattedName + formattedDegree;
+
+        $('.education-entry').append(formattedNameDegree);
+        $('.education-entry').append(formattedDates);
+        $('.education-entry').append(formattedLocation);
+
+        for (var j = 0, jLen = education.schools[i].majors.length; j < jLen; j++) {
+          var formattedMajor = HTMLschoolMajor.replace(DATA, education.schools[i].majors[j]);
+
+          $('.education-entry').append(formattedMajor);
+        }
+      }
+    }
+
+    if (education.onlineCourses.length > 0) {
+      $('#education').append(HTMLonlineClasses);
+      $('#education').append(HTMLschoolStart);
+
+      for (var i = 0, len = education.onlineCourses.length; i < len; i++) {
+        var formattedTitle = HTMLonlineTitle.replace(DATA, education.onlineCourses[i].title).replace('#', education.onlineCourses[i].url);
+        var formattedSchool = HTMLonlineSchool.replace(DATA, education.onlineCourses[i].school);
+        var formattedDates = HTMLonlineDates.replace(DATA, education.onlineCourses[i].dates);
+        var formattedUrl = HTMLonlineURL.replace(DATA, education.onlineCourses[i].url);
+        var formattedTitleSchool = formattedTitle + formattedSchool;
+
+        $('.education-entry').append(formattedTitleSchool);
+        $('.education-entry').append(formattedDates);
+        $('.education-entry').append(formattedUrl);
       }
     }
   }
@@ -215,3 +282,4 @@ var projects = {
 bio.display();
 work.display();
 projects.display();
+education.display();
