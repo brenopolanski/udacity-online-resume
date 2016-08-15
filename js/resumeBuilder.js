@@ -238,7 +238,7 @@ var education = {
    }
   ],
   display: function() {
-    if (education.schools.length > 0) {
+    if (education.schools.length > 0 || education.onlineCourses.length > 0) {
       $('#education').append(HTMLschoolStart);
 
       for (var i = 0, iLen = education.schools.length; i < iLen; i++) {
@@ -258,17 +258,15 @@ var education = {
           $('.education-entry:last').append(formattedMajor);
         }
       }
-    }
 
-    if (education.onlineCourses.length > 0) {
       $('#education').append(HTMLonlineClasses);
       $('#education').append(HTMLschoolStart);
 
-      for (var i = 0, len = education.onlineCourses.length; i < len; i++) {
-        var formattedTitle = HTMLonlineTitle.replace(DATA, education.onlineCourses[i].title).replace('#', education.onlineCourses[i].url);
-        var formattedSchool = HTMLonlineSchool.replace(DATA, education.onlineCourses[i].school);
-        var formattedDates = HTMLonlineDates.replace(DATA, education.onlineCourses[i].dates);
-        var formattedUrl = HTMLonlineURL.replace(DATA, education.onlineCourses[i].url);
+      for (var k = 0, len = education.onlineCourses.length; k < len; k++) {
+        var formattedTitle = HTMLonlineTitle.replace(DATA, education.onlineCourses[k].title).replace('#', education.onlineCourses[k].url);
+        var formattedSchool = HTMLonlineSchool.replace(DATA, education.onlineCourses[k].school);
+        var formattedDates = HTMLonlineDates.replace(DATA, education.onlineCourses[k].dates);
+        var formattedUrl = HTMLonlineURL.replace(DATA, education.onlineCourses[k].url);
         var formattedTitleSchool = formattedTitle + formattedSchool;
 
         $('.education-entry:last').append(formattedTitleSchool);
@@ -283,3 +281,4 @@ bio.display();
 work.display();
 projects.display();
 education.display();
+$('#mapDiv').append(googleMap);
