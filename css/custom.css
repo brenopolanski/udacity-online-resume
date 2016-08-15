@@ -1,0 +1,11 @@
+.biopic {
+  border-radius: 50%;
+}
+
+#header > span {
+  color: #fff;
+}
+
+.dark {
+  background: #000 !important;
+}
